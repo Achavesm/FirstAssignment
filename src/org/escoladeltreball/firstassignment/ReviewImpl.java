@@ -28,6 +28,7 @@ public final class ReviewImpl implements Review {
 	 */	
 	@Override
 	public double frequencyPercentage(int[] values, int n) {
+		//We're checking if the array entered is empty, if it is, returns zero, if not, returns the percentage of times that number appears in the array
 		return values.length == 0 ? 0 : ((double) frequency(values, n)) / values.length * 100;
 	}
 
