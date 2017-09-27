@@ -69,7 +69,6 @@ public class ReviewImplTest {
 	 * Test method for
 	 * {@link org.escoladeltreball.ReviewImpl.Main#merge(int[], int)}.
 	 */
-	@Ignore
 	@Test
 	public final void testMerge() {
 		int[] values = { 1, 2, 3, 5, 7, 9, 11, 15 };

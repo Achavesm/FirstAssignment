@@ -38,7 +38,18 @@ public final class ReviewImpl implements Review {
 	 */
 	@Override
 	public int[] merge(int[] values, int n) {
-		return null;
+		int[] newValues = new int[values.length + 1];
+		int i = 0;
+		while (i < values.length && n > values[i]) {
+			newValues[i] = values[i];
+			i++;
+		}
+		newValues[i] = n;
+		while (i < values.length) {
+			newValues[i + 1] = values[i];
+			i++;
+		}
+		return newValues;
 	}
 
 	/*
@@ -49,7 +60,6 @@ public final class ReviewImpl implements Review {
 	 */
 	@Override
 	public int[][] split(int[] values) {
-		//TO DO
 		return null;
 	}
 
