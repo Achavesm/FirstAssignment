@@ -9,10 +9,18 @@ package org.escoladeltreball.firstassignment;
  */
 public final class ReviewImpl implements Review {
 
+	/**
+	 * This method returns the number of times an integer number appears in an integer array
+	 * @param values as an integer array
+	 * @param n as an integer number 
+	 * @return the number of times n appears in values
+	 */
 	private int frequency(int[] values, int n) {
 		int counter = 0;
+		//We're going over the array to check if the number entered is the same than the current value of the array
 		for (int value : values) {
 			if (n == value) {
+				//If it is, the counter increases by 1
 				counter++;
 			}
 		}
