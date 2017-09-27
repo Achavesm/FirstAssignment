@@ -65,6 +65,7 @@ public final class ReviewImpl implements Review {
 		int dimension = 0;
 		int evenCounter = 0;
 		int oddCounter = 0;
+		//First of all, we're counting how much even and odds numbers there are
 		for (int i = 0; i < values.length; i++) {
 			if (values[i] % 2 == 0) {
 				evens++;
@@ -72,9 +73,12 @@ public final class ReviewImpl implements Review {
 				odds++;
 			}
 		}
+		//Now, we're creating the new 2-dimensions array with 2 rows
 		int[][] newValues = new int[2][];
+		//Let's add the necessary columns to save the numbers without having any empty cell
 		newValues[0] = new int[evens];
 		newValues[1] = new int[odds];
+		//Now it's time to put each number in its row. (Evens in the first one, and odds in the second one)
 		for (int i = 0; i < values.length; i++) {
 			if (values[i] % 2 == 0) {
 				newValues[0][evenCounter] = values[i];
