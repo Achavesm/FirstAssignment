@@ -73,11 +73,7 @@ public final class ReviewImpl implements Review {
 	 */
 	@Override
 	public int[][] split(int[] values) {
-		int evens = 0;
-		int odds = 0;
-		int dimension = 0;
-		int evenCounter = 0;
-		int oddCounter = 0;
+		int evens = 0, odds = 0, evenCounter = 0, oddCounter = 0;
 		//First of all, we're counting how much even and odds numbers there are
 		for (int i = 0; i < values.length; i++) {
 			if (values[i] % 2 == 0) {
