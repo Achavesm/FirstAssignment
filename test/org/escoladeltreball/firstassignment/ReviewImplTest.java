@@ -85,7 +85,6 @@ public class ReviewImplTest {
 	 * Test method for
 	 * {@link org.escoladeltreball.ReviewImpl.Main#split(int[])}.
 	 */
-	@Ignore
 	@Test
 	public final void testSplit() {
 		int[] values = { 1, 2, 3, 5, 7, 9, 11, 15 };
