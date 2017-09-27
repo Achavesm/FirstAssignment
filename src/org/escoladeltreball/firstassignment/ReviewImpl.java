@@ -38,13 +38,17 @@ public final class ReviewImpl implements Review {
 	 */
 	@Override
 	public int[] merge(int[] values, int n) {
+		//First of all, we're creating a new array with just one more position
 		int[] newValues = new int[values.length + 1];
 		int i = 0;
+		//We're putting all the values that are in the first array to the new array until the next value of the first array is bigger than the number we want to add
 		while (i < values.length && n > values[i]) {
 			newValues[i] = values[i];
 			i++;
 		}
+		//Now it's time to locate our desired number
 		newValues[i] = n;
+		//Now, and until the end, we're putting all the rest of the numbers just next to the number we wanted to put in
 		while (i < values.length) {
 			newValues[i + 1] = values[i];
 			i++;
